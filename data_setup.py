@@ -7,7 +7,8 @@ import os
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
-NUM_WORKERS = os.cpu_count()
+# NUM_WORKERS = os.cpu_count()
+NUM_WORKERS = 0
 
 def create_dataloaders(
     train_dir: str,
@@ -42,7 +43,7 @@ def create_dataloaders(
         batch_size=batch_size,
         shuffle=True,
         num_workers=num_workers,
-        pin_memory=True,  # faster data transfer to GPU if available
+        pin_memory=False,  # faster data transfer to GPU if available (False on macOS CPU, True for GPU)
     )
     
     test_dataloader = DataLoader(
@@ -50,7 +51,7 @@ def create_dataloaders(
         batch_size=batch_size,
         shuffle=False,
         num_workers=num_workers,
-        pin_memory=True,
+        pin_memory=False,
     )
 
     return train_dataloader, test_dataloader, class_names
