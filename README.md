@@ -14,6 +14,6 @@ Data is kept locally and not included in this repository.
 - [x] Project skeleton
 - [x] Data collection
 - [x] data_setup.py
-- [ ] model_builder.py
+- [x] model_builder.py
 - [ ] train.py
 - [ ] predict.py (real-time loop)
