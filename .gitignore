@@ -1,0 +1,20 @@
+# Dataset - keep photos out of Git
+data/
+
+# Model weights
+models/
+*.pth
+*.pt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
